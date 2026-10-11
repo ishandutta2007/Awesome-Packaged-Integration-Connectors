@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1D" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+
+    <!-- Vibrant Title Gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="40%" stop-color="#818CF8" />
+      <stop offset="75%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+
+    <!-- Animated Data Flow Stream Gradients -->
+    <linearGradient id="flow-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#D946EF" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="flow-grad-2" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#10B981" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Central Ambient Glow -->
+    <radialGradient id="ambient-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.08); }
+    }
+    @keyframes dash-flow {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes dash-flow-reverse {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 240; }
+    }
+    @keyframes node-pulse {
+      0%, 100% { r: 5px; filter: drop-shadow(0 0 4px #6366F1); }
+      50% { r: 8px; filter: drop-shadow(0 0 10px #38BDF8); }
+    }
+    @keyframes float-pill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .bg { fill: url(#bg-grad); }
+    .glow { animation: pulse-glow 7s ease-in-out infinite; transform-origin: 450px 140px; }
+    .stream-1 { stroke: url(#flow-grad-1); stroke-width: 2.5; stroke-dasharray: 8 14; animation: dash-flow 9s linear infinite; }
+    .stream-2 { stroke: url(#flow-grad-2); stroke-width: 2; stroke-dasharray: 6 12; animation: dash-flow-reverse 11s linear infinite; }
+    .node-pt { animation: node-pulse 3.5s ease-in-out infinite; }
+    .pill-left { animation: float-pill 5s ease-in-out infinite; }
+    .pill-right { animation: float-pill 5.5s ease-in-out 1.2s infinite; }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect class="bg" width="900" height="280" rx="16" />
+
+  <!-- Ambient Radiant Core -->
+  <circle class="glow" cx="450" cy="140" r="230" fill="url(#ambient-glow)" />
+
+  <!-- Dynamic Connector Network Architecture Lines (In Background) -->
+  <g opacity="0.4">
+    <!-- Top & Bottom Data Pipelines -->
+    <path class="stream-1" d="M 40 60 Q 240 15 450 65 T 860 60" fill="none" />
+    <path class="stream-2" d="M 50 220 Q 260 265 470 215 T 850 225" fill="none" />
+    <path class="stream-1" d="M 90 140 C 270 70, 630 210, 810 140" fill="none" />
+
+    <!-- Pulsing Interconnection Nodes -->
+    <circle class="node-pt" cx="100" cy="65" fill="#38BDF8" />
+    <circle class="node-pt" cx="300" cy="38" fill="#818CF8" />
+    <circle class="node-pt" cx="620" cy="72" fill="#C084FC" />
+    <circle class="node-pt" cx="800" cy="62" fill="#F472B6" />
+
+    <circle class="node-pt" cx="140" cy="225" fill="#10B981" />
+    <circle class="node-pt" cx="360" cy="245" fill="#06B6D4" />
+    <circle class="node-pt" cx="590" cy="215" fill="#818CF8" />
+    <circle class="node-pt" cx="770" cy="230" fill="#E879F9" />
+  </g>
+
+  <!-- Background Decorative Pills (Subtle, Behind Foreground Card) -->
+  <g opacity="0.25">
+    <g class="pill-left" transform="translate(50, 45)">
+      <rect width="120" height="26" rx="13" fill="#1E293B" stroke="#475569" stroke-width="1" />
+      <text x="60" y="17" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">⚡ 700+ SAAS APIS</text>
+    </g>
+    <g class="pill-right" transform="translate(730, 45)">
+      <rect width="120" height="26" rx="13" fill="#1E293B" stroke="#475569" stroke-width="1" />
+      <text x="60" y="17" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">🔌 EMBEDDED IPAAS</text>
+    </g>
+    <g class="pill-left" transform="translate(50, 215)">
+      <rect width="120" height="26" rx="13" fill="#1E293B" stroke="#475569" stroke-width="1" />
+      <text x="60" y="17" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">🔄 DATA ELT &amp; SYNC</text>
+    </g>
+    <g class="pill-right" transform="translate(730, 215)">
+      <rect width="120" height="26" rx="13" fill="#1E293B" stroke="#475569" stroke-width="1" />
+      <text x="60" y="17" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">🔓 OPEN-SOURCE CDK</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND TEXT CONTAINER (Sharp, High-Contrast, Foreground Guaranteed) -->
+  <g text-anchor="middle">
+    <!-- Semi-transparent solid backdrop card for flawless foreground readability -->
+    <rect x="110" y="66" width="680" height="148" rx="16" fill="#0B1120" fill-opacity="0.82" stroke="#334155" stroke-opacity="0.6" stroke-width="1.5" />
+
+    <!-- Top Badge Pill -->
+    <rect x="305" y="82" width="290" height="24" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-opacity="0.7" stroke-width="1" />
+    <text x="450" y="98" fill="#38BDF8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ENTERPRISE IPAAS &amp; PRE-BUILT CONNECTORS</text>
+
+    <!-- Main Title Heading -->
+    <text x="450" y="142" fill="url(#text-grad)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.5">
+      Awesome Packaged Integration Connectors
+    </text>
+
+    <!-- Subtitle Description -->
+    <text x="450" y="180" fill="#E2E8F0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="500">
+      Curated Catalog of SaaS Adapters, Embedded iPaaS, ELT Pipelines &amp; Open-Source CDKs
+    </text>
+  </g>
+</svg>
