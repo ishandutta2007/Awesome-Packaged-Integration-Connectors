@@ -129,7 +129,7 @@ flowchart LR
 
 Explore the top self-hosted open-source integration engines, data replication frameworks, and connector SDKs.
 
-> *Sorted descending by GitHub Star count.*
+> *Sorted descending by GitHub Stars_Count.*
 
 ### ⚡ Workflow Automation & Event Integration
 
@@ -229,7 +229,7 @@ When architecting production integration systems, connector implementations gene
 We welcome community contributions, new connector additions, and updates!
 
 1. 🍴 **Fork** this repository.
-2. 📝 **Add or update** entries in `README.md` maintaining the exact structure (ensure verified pricing, star counts, and direct links).
+2. 📝 **Add or update** entries in `README.md` maintaining the exact structure (ensure verified pricing, Stars_Counts, and direct links).
 3. 🧪 Verify all markdown links, table alignments, and badge formatting.
 4. 🚀 Submit a **Pull Request** with a concise summary of changes.
 
@@ -263,3 +263,12 @@ If you find this repository helpful for your engineering research, integration a
 ## 📜 License
 
 This repository is licensed under the [MIT License](LICENSE).
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Packaged-Integration-Connectors&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Packaged-Integration-Connectors_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Packaged-Integration-Connectors_growth.svg">
+  </picture>
+</a>
